@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 '''
-read_yaml_file.py
+handle_yaml.py
 
 Reads a Yaml file store it in a variable.
 The file also have a example function for printing some info
 
 The function can be included in other scripts like this:
-    from read_yaml_file import read_yaml
+    from handle_yaml import read_yaml
     yaml_data = read_yaml(MY_FILE)
+    result = save_to_yaml_file('output.yaml', yaml_data)
 
 '''
 
@@ -33,6 +34,19 @@ def read_yaml(filename, verbose=0):
 
     return data
 
+def save_to_yaml_file(filename, datai, verbose=0):
+    # Saves data to file
+    try:
+        with open(filename, 'w') as file:
+            yaml.dump(data, file, default_flow_style=False)
+        if verbose > 0:
+            print(f"Data successfully written to {filename}")
+        return True
+    except Exception as e:
+        if verbose > 0:
+            print(f"An error occurred while writing to the file: {e}")
+        return False
+
 def print_questions_and_options(data):
     # Example function to print som info
     if data is None:
@@ -55,3 +69,4 @@ def print_questions_and_options(data):
 # Usage example:
 yaml_data = read_yaml('your_file.yml')
 print_questions_and_options(yaml_data)
+save_to_yaml_file('output.yaml', {"key": "value", "list": [1, 2, 3]})
