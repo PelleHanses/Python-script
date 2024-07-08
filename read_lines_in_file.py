@@ -11,7 +11,15 @@ The function can be included in other scripts like this:
 
 '''
 
-def read_lines(filename):
+import os
+
+def read_lines(filename, verbose=0):
+    # Check if the file exists
+    if not os.path.exists(filename):
+        if verbose > 0:
+            print(f"Error: The file '{filename}' does not exist.")
+        return []
+
     lines = []
     with open(filename, 'r') as file:
         for line in file:
@@ -21,5 +29,5 @@ def read_lines(filename):
     return lines
 
 # Usage example:
-file_content = read_lines('your_file.txt')
+file_content = read_lines('your_file.txt', 1)
 print(file_content)
