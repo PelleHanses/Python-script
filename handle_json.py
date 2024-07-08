@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 '''
-read_json_file.py
+handle_json.py
 
-Reads a Json file store it in a array.
+Reads a Json file store it in a variable.
 The file also have a example function for printing some info
 
 The function can be included in other scripts like this:
-    from read_json_file import read_json
-    lines = read_json(MY_FILE)
+    from handle_json import read_json
+    json_data = read_json(MY_FILE)
+    result = save_to_yaml_file(MY_FILE, json_data)
 
 '''
 
@@ -35,6 +36,18 @@ def read_json(filename, verbose=0):
 
     return data
 
+def save_to_yaml_file(filename, data, verbose=1):
+    try:
+        with open(filename, 'w') as file:
+            yaml.dump(data, file, default_flow_style=False)
+        if verbose > 0:
+            print(f"Data successfully written to {filename}")
+        return True
+    except Exception as e:
+        if verbose > 0:
+            print(f"An error occurred while writing to the file: {e}")
+        return False
+
 def print_questions_and_options(data):
     # Sample print of some info in the Json file
     if data is None:
@@ -58,4 +71,4 @@ def print_questions_and_options(data):
 json_data = read_json('your_file.json')
 #print(json_data)
 print_questions_and_options(json_data)
-
+result = save_to_json_file('output.json', {"key": "value", "list": [1, 2, 3]})
