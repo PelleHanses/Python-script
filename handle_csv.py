@@ -2,6 +2,11 @@
 '''
 create_csv.py
 Creates a CSV from an array.
+The file also have a example function for saving some info
+
+The function can be included in other scripts like this:
+    from handle_csv import create_csv_file
+    result, csv_file_name = create_csv_file(MY_FILE)
 '''
 
 import csv
