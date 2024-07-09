@@ -47,5 +47,5 @@ csv_array = [
     {"Name": "Bob", "Age": 22, "Grade": "B"},
     {"Name": "Charlie", "Age": 24, "Grade": "C"},
 ]
-csv_file = "my_file.csv"
+csv_file = "your_file.csv"
 result, csv_file_name = create_csv_file(csv_array, csv_file)
