@@ -4,7 +4,7 @@ loop_for.py
 Examples of loops with for.
 
 The function can be included in other scripts like this:
-    from loop_for import loop_
+    from loop_for import loop_array, loop_array_dict, loop_list, loop_n
     result = loop_array(array_to_loop)
     result = loop_array_dict(array_to_loop)
     result = loop_list(list_to_loop)
