@@ -1,2 +1,2 @@
 # Python-script
-A bunch of small Python-code that is nice to have.
+A bunch of small examples with Python-code that is nice to have.
