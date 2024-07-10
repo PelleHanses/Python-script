@@ -2,7 +2,7 @@
 '''
 arguments.py
 
-A function that handle arguments.
+A function that handle arguments like ./arguments.py --name "My Name" --phone "04494938943".
 This file stops if not all required arguments are given, with an explanation.
 You could also get the help screen by typing:
     ./arguments.py --help
