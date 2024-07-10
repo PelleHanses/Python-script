@@ -47,12 +47,13 @@ def get_curl_result(address_to_get, allow_insecure=False, verbose=True):
 
 
 ## Start
-# Example address
-address_to_get = "https://github.com/PelleHanses"
-allow_insecure = False
-address_result = get_curl_result(address_to_get, allow_insecure)
-print()
-print(f"The fetched result from {address_to_get}")
-print()
-print(str(address_result))
-print()
+if __name__ == "__main__":
+    # Example address
+    address_to_get = "https://github.com/PelleHanses"
+    allow_insecure = False
+    address_result = get_curl_result(address_to_get, allow_insecure)
+    print()
+    print(f"The fetched result from {address_to_get}")
+    print()
+    print(str(address_result))
+    print()
