@@ -53,22 +53,23 @@ def loop_n(nr_of_loops):
 
 
 ## Start
-# Define an array of integers
-my_array = array.array('i', [1, 2, 3, 4, 5])
-loop_array(my_array)
+if __name__ == "__main__":
+    # Define an array of integers
+    my_array = array.array('i', [1, 2, 3, 4, 5])
+    loop_array(my_array)
 
-# Define an array of dictionaries
-my_arraydict = [
-    {"Name": "Alice", "Age": 23, "Grade": "A"},
-    {"Name": "Bob", "Age": 22, "Grade": "B"},
-    {"Name": "Charlie", "Age": 24, "Grade": "C"},
-]
-loop_array_dict(my_array_dict)
+    # Define an array of dictionaries
+    my_arraydict = [
+        {"Name": "Alice", "Age": 23, "Grade": "A"},
+        {"Name": "Bob", "Age": 22, "Grade": "B"},
+        {"Name": "Charlie", "Age": 24, "Grade": "C"},
+    ]
+    loop_array_dict(my_array_dict)
 
-# Define a list of strings
-my_list = ["apple", "banana", "cherry", "date", "elderberry"]
-loop_list(my_list)
+    # Define a list of strings
+    my_list = ["apple", "banana", "cherry", "date", "elderberry"]
+    loop_list(my_list)
 
-# Define number of loops
-nr_of_loops = 10
-loop_n(nr_of_loops)
+    # Define number of loops
+    nr_of_loops = 10
+    loop_n(nr_of_loops)
