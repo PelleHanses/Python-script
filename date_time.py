@@ -53,14 +53,15 @@ def get_first_last_timestamps(year_month):
 
 
 ## Start
-current_timestamp = time.time()  # Get the current Unix timestamp
-print("")
-readable_date = convert_timestamp(current_timestamp)
-print(f"Todays date and time: {readable_date}")
+if __name__ == "__main__":
+    current_timestamp = time.time()  # Get the current Unix timestamp
+    print("")
+    readable_date = convert_timestamp(current_timestamp)
+    print(f"Todays date and time: {readable_date}")
 
-last_month = get_last_mont()
-print(f"Last month: {last_month}")
+    last_month = get_last_mont()
+    print(f"Last month: {last_month}")
 
-first_day_timestamp, last_day_timestamp = get_first_last_timestamps(last_month)
-print(f"First day timestamp = {first_day_timestamp}. Last day timestamp = {last_day_timestamp}")
-print("")
+    first_day_timestamp, last_day_timestamp = get_first_last_timestamps(last_month)
+    print(f"First day timestamp = {first_day_timestamp}. Last day timestamp = {last_day_timestamp}")
+    print("")
