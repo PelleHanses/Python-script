@@ -66,7 +66,8 @@ def print_questions_and_options(data):
             index = index + 1
         print()  # Add a blank line between categories
 
-# Usage example:
-yaml_data = read_yaml('your_file.yml')
-print_questions_and_options(yaml_data)
-save_to_yaml_file('output.yaml', {"key": "value", "list": [1, 2, 3]})
+## Start
+if __name__ == "__main__":
+    yaml_data = read_yaml('your_file.yml')
+    print_questions_and_options(yaml_data)
+    save_to_yaml_file('output.yaml', {"key": "value", "list": [1, 2, 3]})
