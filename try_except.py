@@ -2,9 +2,13 @@
 """
 try_except.py
 Handles failures in a function.
+
+The function can be included in other scripts like this:
+    from try_except import read_file
+    result = read_file(MY_FILE)
 """
 
-def read_file(file_pathi, verbose=1):
+def read_file(file_path, verbose=1):
     """
     Function to read a file and print its contents.
     If the file does not exist or other errors occur, an error message is printed.
