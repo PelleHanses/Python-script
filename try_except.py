@@ -32,8 +32,9 @@ def read_file(file_path, verbose=1):
         return f"An unexpected error occurred: {e}"
 
 ## Start
-file_path = 'not_your_file.txt'
-result = read_file(file_path, 0)
-print("")
-print(f"The result: {result}")
-print("")
+if __name__ == "__main__":
+    file_path = 'not_your_file.txt'
+    result = read_file(file_path, 0)
+    print("")
+    print(f"The result: {result}")
+    print("")
