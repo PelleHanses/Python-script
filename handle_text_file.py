@@ -42,7 +42,8 @@ def save_to_text_file(filename, data, verbose=0):
             print(f"An error occurred while writing to the file: {e}")
         return False
 
-# Usage example:
-file_content = read_lines('your_file.txt', 1)
-print(file_content)
-result = save_to_text_file('output.txt', ['Line 1', 'Line 2', 'Line 3'])
+### Start
+if __name__ == "__main__":
+    file_content = read_lines('your_file.txt', 1)
+    print(file_content)
+    result = save_to_text_file('output.txt', ['Line 1', 'Line 2', 'Line 3'])
