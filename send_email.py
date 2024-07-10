@@ -77,13 +77,14 @@ def attach_file(msg, filepath):
 
 
 ## Start
-sender_email = False
-receiver_email = "from_me@example.com"
-body = "This is my first test email"
-subject = "Testing testing"
-attached = ["your_file.csv", "your_file.pdf"]
-result = send_email(sender_email, receiver_email, body, subject, attached)
-if result:
-    print("Email sent successfully.")
-else:
-    print("Failed to send email.")
+if __name__ == "__main__":
+    sender_email = False
+    receiver_email = "from_me@example.com"
+    body = "This is my first test email"
+    subject = "Testing testing"
+    attached = ["your_file.csv", "your_file.pdf"]
+    result = send_email(sender_email, receiver_email, body, subject, attached)
+    if result:
+        print("Email sent successfully.")
+    else:
+        print("Failed to send email.")
