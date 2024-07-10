@@ -133,4 +133,6 @@ pdf_data = [
     },
 ]
 
-create_pdf(pdf_content, pdf_data)
+### Start
+if __name__ == "__main__":
+    create_pdf(pdf_content, pdf_data)
