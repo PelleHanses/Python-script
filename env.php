@@ -27,7 +27,8 @@ def get_value(argument_to_fetch, verbose=False):
         return None
 
 ## Start
-argument_to_fetch = "SMTP_PORT"
-result = get_value(argument_to_fetch)
-print()
-print(f"  Fetched value for {argument_to_fetch}: {result}")
+if __name__ == "__main__":
+    argument_to_fetch = "SMTP_PORT"
+     result = get_value(argument_to_fetch)
+     print()
+     print(f"  Fetched value for {argument_to_fetch}: {result}")
