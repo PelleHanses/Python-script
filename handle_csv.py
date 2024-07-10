@@ -42,10 +42,11 @@ def create_csv_file(csv_array, file_name, verbose=0):
 
 
 ## Start
-csv_array = [
-    {"Name": "Alice", "Age": 23, "Grade": "A"},
-    {"Name": "Bob", "Age": 22, "Grade": "B"},
-    {"Name": "Charlie", "Age": 24, "Grade": "C"},
-]
-csv_file = "your_file.csv"
-result, csv_file_name = create_csv_file(csv_array, csv_file)
+if __name__ == "__main__":
+    csv_array = [
+        {"Name": "Alice", "Age": 23, "Grade": "A"},
+        {"Name": "Bob", "Age": 22, "Grade": "B"},
+        {"Name": "Charlie", "Age": 24, "Grade": "C"},
+    ]
+    csv_file = "your_file.csv"
+    result, csv_file_name = create_csv_file(csv_array, csv_file)
