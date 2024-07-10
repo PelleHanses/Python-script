@@ -67,8 +67,9 @@ def print_questions_and_options(data):
             index = index + 1
         print()  # Add a blank line between categories
 
-# Usage example:
-json_data = read_json('your_file.json')
-#print(json_data)
-print_questions_and_options(json_data)
-result = save_to_json_file('output.json', {"key": "value", "list": [1, 2, 3]})
+### Start
+if __name__ == "__main__":
+    json_data = read_json('your_file.json')
+    #print(json_data)
+    print_questions_and_options(json_data)
+    result = save_to_json_file('output.json', {"key": "value", "list": [1, 2, 3]})
