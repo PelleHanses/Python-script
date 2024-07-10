@@ -5,18 +5,27 @@ Example of logging.
 
 The function can be included in other scripts like this:
     from log_file import log_msg
+    configure_logging(log_file)
     result = log_msg(level, msg)
 """
 
 import datetime
 import logging
 
-# Set up the logging configuration
-logging.basicConfig(
-    filename="./log_file.log",                           # Specify the log file path
-    level=logging.DEBUG,                                  # Set the logging level (INFO, DEBUG, WARNING, ERROR, etc.)
-    format='%(asctime)s - %(levelname)s - %(message)s'   # Define the log message format
-)
+def configure_logging(log_file):
+    """
+    Configures logging settings.
+
+    Parameters:
+    - log_file (str): The file where logs will be saved.
+    """
+    logging.basicConfig(
+        filename=log_file,
+        level=logging.DEBUG,
+        format='%(asctime)s - %(levelname)s - %(message)s',
+        filemode='a'  # 'w' to overwrite the log file each run, 'a' to append
+    )
+    logging.getLogger().addHandler(logging.StreamHandler())  # Also log to console
 
 def log_msg(level, msg):
     """
@@ -54,6 +63,8 @@ def example_function():
         log_msg("error", f"An error occurred (2): {str(e)}")
 
 def main():
+    log_file = "dynamic_log_file.log"
+    configure_logging(log_file)
     logging.info("Starting program")
     logging.warning("This is a warning message")
 
